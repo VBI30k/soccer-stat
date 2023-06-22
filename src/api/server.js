@@ -10,9 +10,11 @@ const port = 8000
 
 app.use(cors())
 
-app.get('/data', async (req, res) => {
+app.get('/competitions', async (req, res) => {
   try {
-    const response = await axios.get('https://api.football-data.org/v4/matches')
+    const response = await axios.get(
+      'https://api.football-data.org/v4/competitions/'
+    )
     res.status(200).json(response.data)
   } catch (err) {
     res.status(500).json({ message: err })

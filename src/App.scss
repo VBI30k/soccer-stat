@@ -1,0 +1,10 @@
+.header {
+  &__logo {
+    cursor: pointer;
+    width: 100px;
+    background-image: url('../public/logo.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
