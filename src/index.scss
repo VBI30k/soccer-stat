@@ -1,3 +1,9 @@
 body {
   margin: 0;
 }
+
+.css-e47596-MuiDateRangeCalendar-root {
+  > div:first-child {
+    display: none;
+  }
+}
