@@ -90,7 +90,7 @@ export default function Leagues({ setLeagueId }) {
           .slice((leagesPage - 1) * pageSize, leagesPage * pageSize)
           .map((league) => {
             return (
-              <Grid item xs={4} key={league.id}>
+              <Grid item xs={12} sm={6} md={4} key={league.id}>
                 <Card
                   onClick={() => {
                     setLeagueId(league.id)

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-undef */
+require('dotenv').config()
 
 const express = require('express')
 const axios = require('axios')
@@ -18,7 +19,7 @@ app.get('/matches/:id', async (req, res) => {
         : `https://api.football-data.org/v4/competitions/${req.params.id}/matches`,
       {
         headers: {
-          'X-Auth-Token': 'd99448926b8640a28745ef55e381a06f',
+          'X-Auth-Token': process.env.TOKEN,
         },
       }
     )
@@ -47,7 +48,7 @@ app.get('/command-matches/:id', async (req, res) => {
         : `https://api.football-data.org/v4/teams/${req.params.id}/matches`,
       {
         headers: {
-          'X-Auth-Token': 'd99448926b8640a28745ef55e381a06f',
+          'X-Auth-Token': process.env.TOKEN,
         },
       }
     )
@@ -63,7 +64,7 @@ app.get('/commands', async (req, res) => {
       'https://api.football-data.org/v4/teams/',
       {
         headers: {
-          'X-Auth-Token': 'd99448926b8640a28745ef55e381a06f',
+          'X-Auth-Token': process.env.TOKEN,
         },
       }
     )

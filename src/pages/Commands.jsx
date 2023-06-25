@@ -84,7 +84,7 @@ export default function Commands({ setCommandId, setCommandName }) {
           .slice((commandsPage - 1) * pageSize, commandsPage * pageSize)
           .map((command) => {
             return (
-              <Grid item xs={4} key={command.id}>
+              <Grid item xs={12} sm={6} md={4} key={command.id}>
                 <Card
                   onClick={() => {
                     setCommandId(command.id)
